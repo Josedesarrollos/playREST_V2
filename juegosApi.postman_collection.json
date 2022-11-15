@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "7f182ea6-5951-450d-b31b-456a860412e3",
+		"name": "juegosApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18235283"
+	},
+	"item": [
+		{
+			"name": "juegos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/juegos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"juegos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "juegosPorID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/juegos/6373bb4781769b6ce3a4c4d5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"juegos",
+						"6373bb4781769b6ce3a4c4d5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insertarJuego",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {  \"nombre\": \"Carcassonne 20\",\r\n            \"descripcion\": \"La esperada edición 20 aniversario de Carcassonne llega por fin a las tiendas: nuevas losetas, ilustraciones inéditas, meeples personalizables en una edición de lujo...con la misma jugabilidad de siempre íMiles de horas de diversión en la nueva caja del clásico juego de colocación de losetas! Carcassonne, uno de los juegos más influyentes y jugados del mundo cumple 20 años, y en Devir queremos celebrarlo por todo lo alto. Carcassonne fue diseñado en el año 2000 por uno de los mejores autores del panorama lúdico: Klaus-Jürgen Wrede. Después de 20 años, miles de copias vendidas por todo el mundo, expansiones y versiones del juego íLlega la caja definitiva para la celebración de esta efeméride en el mundo de los juegos de mesa!\",\r\n\r\n    \"edad\": 7,\r\n    \"tipo\": \"tablero\",\r\n    \"precio\": 37.95,\r\n    \"imagen\":\"/Carcassonne 20\",\r\n    \"edicion\":\r\n    {\r\n        \"nombre\":\"20 Aniversario\",\r\n        \"anyo\": 2020\r\n\r\n\r\n    }\r\n\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/juegos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"juegos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificarJuego",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \"nombre\": \"WIZ-WAR\",\r\n        \"descripcion\": \"Wiz-War nos traslada a una mazmorra laberíntica donde magos lucharán por hacerse con el titulo de Decano de la orden, matando a sus adversarios o robándoles el control de sus tesoros, por medio de hechizos, convirtiéndose en criaturas o sembrando un caos mágico.\",\r\n    \"edad\": 10,\r\n    \"tipo\": \"tablero\",\r\n    \"precio\": 20,\r\n    \"imagen\":\"/WIZ-WAR\"\r\n  \r\n\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/juegos/6373beed81769b6ce3a4c4db",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"juegos",
+						"6373beed81769b6ce3a4c4db"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insertarEdicion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " \r\n    {\r\n      \"nombre\": \"edición 2022\",\r\n      \"anyo\": 2022\r\n      \r\n    }\r\n  ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/juegos/ediciones/6373beed81769b6ce3a4c4db/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"juegos",
+						"ediciones",
+						"6373beed81769b6ce3a4c4db",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "borrarJuego",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/juegos/6373c7d2d945e2a3b7e8b169",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"juegos",
+						"6373c7d2d945e2a3b7e8b169"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BorrarEdiciondeunJuego",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/juegos/ediciones/6373beed81769b6ce3a4c4db/6373beed81769b6ce3a4c4dc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"juegos",
+						"ediciones",
+						"6373beed81769b6ce3a4c4db",
+						"6373beed81769b6ce3a4c4dc"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
